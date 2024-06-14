@@ -2,8 +2,9 @@
 <html>
     <head>
         <script>
-            const hash = window.location.hash.substring(1)
+            let hash = window.location.hash.substring(1);
             try {
+                hash = atob(hash);
                 const url = new URL(hash);
                 location.replace(hash);
             } catch (e) {
