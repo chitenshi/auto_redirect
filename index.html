@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script>
+            const hash = window.location.hash.substring(1)
+            try {
+                const url = new URL(hash);
+                location.replace(hash);
+            } catch (error) {
+                document.body.textContent = url + " 는 유효하지 않는 URL입니다.";
+            }
+        </script>
+    </head>
+<html>
