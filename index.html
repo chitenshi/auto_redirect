@@ -7,10 +7,12 @@
                 const url = new URL(hash);
                 location.replace(hash);
             } catch (error) {
-                document.body.onload = function(){
-                    document.body.textContent = hash + " 는 유효하지 않는 URL입니다.";
+                document.onload = function(){
+                    document.body.append(hash + " 는 유효하지 않는 URL입니다.");
                 }
             }
         </script>
     </head>
+    <body>
+    </body>
 <html>
