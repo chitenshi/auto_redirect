@@ -6,10 +6,10 @@
             try {
                 const url = new URL(hash);
                 location.replace(hash);
-            } catch (error) {
-                document.onload = function(){
+            } catch (e) {
+                window.addEventListener('load',function(){
                     document.body.append(hash + " 는 유효하지 않는 URL입니다.");
-                }
+                })
             }
         </script>
     </head>
