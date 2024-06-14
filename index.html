@@ -7,7 +7,7 @@
                 const url = new URL(hash);
                 location.replace(hash);
             } catch (error) {
-                document.onload = function(){
+                document.body.onload = function(){
                     document.body.textContent = hash + " 는 유효하지 않는 URL입니다.";
                 }
             }
